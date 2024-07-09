@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Lancelot&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lancelot&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.container-lg{
+    margin-bottom: 10em;
+    
+        min-height: 60%;
+    }
+
+
+
+.category-btns{
+    border: none;
+    font-family: "montserrat";
+    color: #966E4F;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.category-btns:active{
+    border-bottom: 1px solid #966E4F;
+}
+
+
+.pagination{
+    gap: 1em;
+}
+
+.arrow{
+    color: #E88030;
+    /* padding: 0 1em; */
+    margin: 0;
+    font-size: 1em;
+    font-weight: 100;
+    background-color: none!important;
+}
+
+#arrow1{
+  margin-left:0.5em
+}
+
+#arrow2{
+    margin-right: 0.5em;
+    background-color: none!important;
+}
+
+.page-item .page-link{
+    color: #966E4F;
+    padding: 0.4 1em;
+    border: none;
+    background-color: #FCFAF7;
+    border-radius: 8px;
+}
+
+.page-item.active .page-link{
+    background-color: #966E4F;
+    color: #FCFAF7;
+} 
+
+nav{
+    width: inherit;
+}
+
+
+li.page-item.disabled {
+    opacity: 2;
+    border: none;
+    background-color: none;
+    color: #966E4F;
+}
+
+.page-item .page-link:hover{
+    color:  #966E4F;
+    background-color: #fef0df;
+   
+}
+
+.page-item.active .page-link:hover{
+    background-color: #966E4F;
+    color: #FCFAF7;
+} 

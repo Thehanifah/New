@@ -1,0 +1,46 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lancelot&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lancelot&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.card {
+    height: auto;
+    width: 350px;
+    border: none !important;
+  
+  }
+  
+   .card-img-top {
+    height: 400px;
+    width: 150px;
+    border-radius: 10px;
+
+  } 
+
+  .card-text {
+    font-size: 1rem;
+    color: #E88030;
+  }
+
+  .card-title {
+    font-size: 1em;
+    margin-bottom: 8px;
+    font-family: 'montserrat';
+    font-weight: 500;
+    margin-top: 0;
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis for overflow text */
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
+    -webkit-box-orient: vertical;
+  }
+
+
+  /* .card-body {
+    padding: 16px;
+  }*/
+  
+  
+  
+  

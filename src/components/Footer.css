@@ -1,0 +1,67 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lancelot&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lancelot&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.brown{
+    background-color: #966E4F;
+    height: 30px;
+    width: 100%;
+    margin: 0% !important;
+    padding: 0!important;
+}
+
+div.footer-cont {
+    margin: 4% !important;
+    padding: 0!important;
+align-items: center;
+justify-content: center;
+   
+}
+
+.list-inline-item, .list-inline-item a{
+    text-decoration: none;
+   color: #966E4F!important;
+    padding-left: 1em;
+}
+
+.list-inline-item a:first-child{
+    padding-left: 0;
+}
+
+.list-inline-item a:hover{
+    color: #966E4F!important;
+}
+
+.footerbrand{
+    width: fit-content!important;
+  
+}
+.hro{
+   color: #F2EDE8;
+   margin: 4%!Important;
+}
+
+.ul-container{
+    width: fit-content!important;
+   
+}
+
+.copyright-word{
+    color: #966E4F;
+  font-family: 'monteserrat';
+}
+
+.copyright-logo{
+ color: #966E4F;
+ font-size: 2em;
+}
+
+.copyright{
+    margin: 4%!important;
+}
+
+@media (max-width: 850px) {
+    .ul-container{
+        margin: 0%;
+    }
+}

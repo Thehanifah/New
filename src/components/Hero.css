@@ -1,0 +1,135 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lancelot&display=swap');
+
+.hero-container{
+    background-color: #444444;
+    height: calc(100vw * (828 / 1592));
+    background-image: url(../images/hero.png);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.hero-word{
+    align-self:first baseline;
+    float: left;
+    margin: 4%;
+    background-color: initial;
+    }
+
+.explore, .rare{
+    font-family: "lancelot"  ;
+    color: #ffffff;
+    font-size: 10em;
+    
+}
+
+
+
+.explore{
+    background: #966E4F;
+    
+    padding-left: 0.3em;
+    width: 5em;
+}
+
+.rare{
+    background: none;
+}
+
+
+@media (max-width: 1200px) {
+  .explore{
+    font-size: 7em;
+  }
+  .rare{
+    font-size: 5em;
+  }
+  .hero-word{
+    align-self:first baseline;
+
+     }
+
+  }
+
+
+  @media (max-width: 1000px) {
+    
+    .hero-word{
+        align-self:first baseline;
+    
+         }
+      
+  }
+
+@media (max-width: 600px) {
+    .hero-container {
+           background-image: none!important;
+           background-color: #444444!important;
+           margin: 0 4% !important;
+           min-height: 80%!important;
+           border-radius: 4%;
+    }
+    .explore{
+        font-size: 4em;
+      }
+      .rare{
+        font-size: 2em;
+      }
+      
+      .hero-word{
+        align-self:first baseline;
+    
+         }
+  }
+  @media (max-width: 900px) {
+    .container-fluid {
+         
+           background-color: #444444;
+           margin-left:4% !important;
+           margin-right:4% !important;
+           width: 100%;
+           
+           
+    }
+    .explore{
+        font-size: 5em;
+      }
+      .rare{
+        font-size: 3em;
+      }
+      
+      .hero-word{
+        align-self:first baseline;
+    
+         }
+
+  
+
+
+  @media (max-width: 400px) {
+   .hero-container 
+          { /* background-image: none; */
+           background-color: #444444;
+           margin: 0 4% !important;
+           height: 40%;
+           border-radius: 4%;
+    }
+    .explore{
+        font-size: 2em;
+      }
+      .rare{
+        font-size: 1em;
+      }
+      .hero-word{
+        align-self:first baseline;
+    
+         }
+        } 
+  
+
+    }
+
+    
+ 
+     
