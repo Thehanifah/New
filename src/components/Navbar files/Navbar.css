@@ -35,6 +35,8 @@
    
 }
 
+
+
 .navbar-ul li:last-child{
     margin-right: 0;
  }
@@ -54,6 +56,7 @@
 
 #Search-icon, #searchInput::placeholder{
     color:#966E4F;
+    background-color: none;
 }
 
 .searchIcon{
@@ -138,6 +141,7 @@ font-size: 3em;
 
 .toggle-open, .toggle-close, .searchIcon-1{
     color: #966E4F;
+    
 
 }
 
@@ -169,7 +173,7 @@ font-size: 3em;
 
     .searchIcon, .search {
         display: none;
-    
+      
     }
 
     .searchIcon{
@@ -205,9 +209,10 @@ font-size: 3em;
         position: absolute;
         top: 60px; /* Adjust based on your navbar height */
         left: 0;
-        width: 100%;
+        width: 92vw;
         background-color: #fff; /* Adjust background color */
         z-index: 300;
+       
       }
     
       .navbar.active .nav-link span{
@@ -222,7 +227,7 @@ font-size: 3em;
        padding-top: 5em;
        background-color: #FCFAF7;;;
        z-index: 300;
-       width: 100vw;
+       width: 92vw;
     }
 
       .navbar.active .navbar-ul li {
@@ -307,8 +312,9 @@ font-size: 3em;
 
 
 
-    #search-icon{
+    #Search-icon{
         font-size: 1.5em;
+        
         background-color: #F2EDE8;
        margin-right: 0.5em;
         color: #966E4F;  

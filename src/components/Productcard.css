@@ -4,16 +4,22 @@
 
 
 .card {
-    height: auto;
-    width: 350px;
+
+    height: 100%;
+    width: 100%;
     border: none !important;
+    
   
   }
   
+
+  
    .card-img-top {
-    height: 400px;
-    width: 150px;
-    border-radius: 10px;
+    height: 450px;
+    width: auto;
+    color: #FCFAF7;
+    border-radius: 12px 12px 12px 12px!important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
   } 
 
@@ -26,21 +32,53 @@
     font-size: 1em;
     margin-bottom: 8px;
     font-family: 'montserrat';
-    font-weight: 500;
-    margin-top: 0;
+    font-weight: 600;
+    margin: 1em 0 0 0!important;
     overflow: hidden; /* Hide overflow text */
     text-overflow: ellipsis; /* Add ellipsis for overflow text */
     display: -webkit-box;
-    line-clamp: 2;
-    -webkit-line-clamp: 2; /* Limit to 2 lines */
+    line-clamp: 1;
+    -webkit-line-clamp: 1; /* Limit to 2 lines */
     -webkit-box-orient: vertical;
   }
 
 
-  /* .card-body {
-    padding: 16px;
-  }*/
+  .card-body {
+    padding: 0!important;
+  }
   
   
   
+  @media (max-width:1240px){
+    .card-img-top {
+      height: 350px;
+      width: auto;
+      
+    } 
+  }
+
+  @media (max-width:900px){
+    .card-img-top {
+      height: 280px;
+      width: auto;
+      
+    } 
+  }
+
   
+  @media (max-width:750px){
+    .card-img-top {
+      height: 350px;
+      width: 200px
+      
+    } 
+  }
+
+  @media (max-width:600px){
+    .card-img-top {
+      height: 200px;
+      width: auto;
+      
+    } 
+  }
+

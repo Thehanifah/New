@@ -9,7 +9,7 @@ import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 const ProductList = () => {
     const [products, setProducts] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    const productsPerPage = 9; // Number of products per page
+    const productsPerPage = 12; // Number of products per page
   
     useEffect(() => {
       const fetchProducts = async () => {
@@ -37,10 +37,10 @@ const ProductList = () => {
       }, [products]);
   
     return (
-      <div className="container-lg mx-auto">
-        <div className="row">
+      <div className="container-box">
+        <div className="grid-container">
           {currentProducts.map(product => (
-            <div className="col-12 col-sm-6 col-md-4 col-lg-4 mb-4 mt-5" key={product.id}>
+            <div className="grid-item" key={product.id}>
               <ProductCard product={product} />
             </div>
           ))}
