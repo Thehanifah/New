@@ -4,6 +4,7 @@ import Homepage from './components/Homepage';
 import axios from 'axios';
 import Shop from './components/Shop';
 import Navbar from './components/Navbar files/Navbar';
+import Cart from './components/Cart';
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -44,6 +45,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Homepage products={filteredProducts} isSearching={isSearching} />} />
           <Route path="/shop" element={<Shop />} />
+          <Route path="/Cart" element={<Cart />} />
         </Routes>
       </div>
     </Router>
