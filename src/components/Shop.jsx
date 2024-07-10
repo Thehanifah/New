@@ -36,16 +36,16 @@ const Shop = () => {
   
     return (
       <>
-            <div className="container-lg mx-auto">
-          <div className="category-links mb-4 mt-5">
+            <div className="container-box">
+          <div className="category-links">
             <button className=" category-btns mx-2" onClick={() => setCategory('all')}>All</button>
             <button className=" category-btns mx-2" onClick={() => setCategory('men\'s clothing')}>Men</button>
             <button className=" category-btns mx-2" onClick={() => setCategory('women\'s clothing')}>Women</button>
             <button className=" category-btns mx-2" onClick={() => setCategory('jewelery')}>Jewelries</button>
           </div>
-          <div className="row">
+          <div className="grid-container">
             {currentProducts.map(product => (
-              <div className="col-12 col-sm-6 col-md-4 col-lg-4 mb-4 mt-5" key={product.id}>
+              <div className="grid-item" key={product.id}>
                 <ProductCard product={product} />
               </div>
             ))}
