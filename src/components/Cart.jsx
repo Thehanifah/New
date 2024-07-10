@@ -40,7 +40,7 @@ function Cart() {
                 <div className='product-info'>
                     <div className='imgdiv'><img src={image3} alt="" className='image-p' /></div>
                     <div className='the-info'>
-                    <h5 className="card-title-cart">Mens Cotton Jacket </h5>
+                    <h5 className="card-title-cart">Mens Jacket </h5>
                     <div className='prices'>
                     <p className="card-text-cart">$55.99</p>
                     <p className="card-title-cart1">Premium Slim Fit T-Shirts</p>

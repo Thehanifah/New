@@ -184,13 +184,24 @@ font-weight: 600;
             width: 40%;
             
         }
+
+
     }
 
     @media (max-width:552px){
         .plus, .minus{
             
-           font-size: 2em;
+           font-size: 1.5em;
             
+        }
+        .number{
+            font-size: 1em;
+            line-height: 1em;
+            padding: 0 0.4em;
+        }
+
+        .card-text-cart, .card-title-cart, .card-title-cart1{
+            font-size: 0.8;
         }
     }
 
@@ -284,3 +295,5 @@ font-weight: 600;
         }
         
     }
+
+
