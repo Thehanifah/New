@@ -77,6 +77,7 @@ const Navbar = ({ onSearch, onSearchStateChange }) => {
       <ul className={`navbar-ul ${isOpen ? 'show' : ''}`}>
         <li className="nav-item">
           <a className="nav-link active" aria-current="page" href="/Cart"><CiShoppingCart className="nav-item-icon" /><span>Cart</span></a>
+          <span className='cart-number'>3</span>
         </li>
         <li className="nav-item">
           <Link className="nav-link active" to="/shop"><PiHandbagSimpleThin className="nav-item-icon" /> <span>Shop</span></Link>

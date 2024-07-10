@@ -42,7 +42,7 @@ function Cart() {
                     <div className='the-info'>
                     <h5 className="card-title-cart">Mens Cotton Jacket </h5>
                     <div className='prices'>
-                    <p className="card-text-cart">$22.3</p>
+                    <p className="card-text-cart">$55.99</p>
                     <p className="card-title-cart1">Premium Slim Fit T-Shirts</p>
                     </div>
                    
@@ -64,7 +64,7 @@ function Cart() {
                     <div className='the-info'>
                     <h5 className="card-title-cart">Fjallraven </h5>
                     <div className='prices'>
-                    <p className="card-text-cart">$22.3</p>
+                    <p className="card-text-cart">$109.95</p>
                     <p className="card-title-cart1">Foldsack No. 1 Backpack, Fits 15 </p>
                     </div>
                    
@@ -78,10 +78,38 @@ function Cart() {
                   </div>
                 </div>
             </div>
-            <div className='btn-shop'><button className='Shop-again'><a href="/Shop"></a>Continue Shopping</button> </div> 
+            <div className='btn-shop'><button className='Shop-again'><a href="/Shop">Continue Shopping</a></button> </div> 
          </div>   
+    
+    </div>
 
-         
+    <div className='total'>
+      <p className='p1'>
+       Sub Total
+      </p>
+    <p className='p2'>
+     $188.24
+    </p>
+    </div>
+    <div className='total'>
+      <p className='p1'>
+       Estimated Tax
+      </p>
+    <p className='p2'>
+    7%
+    </p>
+    </div>
+    <div className='total'>
+      <p className='p1'>
+       Total
+      </p>
+    <p className='p2'>
+     $201.41
+    </p>
+    </div>
+
+    <div className='checkout-div'>
+    <button className='checkout'>Checkout</button>
     </div>
       
       <Footer/>
