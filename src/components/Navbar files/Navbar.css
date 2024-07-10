@@ -182,6 +182,8 @@ font-size: 3em;
         line-height: 30px;
     }
 
+   
+
     .searchIcon, .search {
         display: none;
       
@@ -225,6 +227,11 @@ font-size: 3em;
         z-index: 300;
        
       }
+
+      .navbar-ul.show .cart-number{
+         display: none;
+       
+      }
     
       .navbar.active .nav-link span{
         color: black;
@@ -234,12 +241,21 @@ font-size: 3em;
         padding: 0.5em;
     }
 
+    .navbar.active .navbar-toggler-2 .toggle-close {
+       top: 0.4em;
+    }
+
     .navbar.active .navbar-ul {
        padding-top: 5em;
        background-color: #FCFAF7;;;
        z-index: 300;
        width: 92vw;
     }
+
+  .searchIcon-1{
+    position: absolute;
+    top: 0.7em;
+  }
 
       .navbar.active .navbar-ul li {
         display: flex;
