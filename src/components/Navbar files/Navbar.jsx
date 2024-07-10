@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import logo from '../../images/logo.png';
 import './Navbar.css';
 import { GoSearch } from "react-icons/go";
@@ -15,6 +15,10 @@ const Navbar = ({ onSearch, onSearchStateChange }) => {
   const [searchInput, setSearchInput] = useState("");
   const navRef = useRef();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    setIsOpen(false); // Close the navbar when the component mounts
+  }, []);
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
