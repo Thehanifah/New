@@ -5,6 +5,7 @@ import axios from 'axios';
 import Shop from './components/Shop';
 import Navbar from './components/Navbar files/Navbar';
 import Cart from './components/Cart';
+import CartProvider from './components/Cartcontext';
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -39,6 +40,7 @@ function App() {
 
   
   return (
+    <CartProvider>
     <Router>
       <div className="App">
         <Navbar onSearchStateChange={setIsSearching} onSearch={handleSearch} />
@@ -49,6 +51,7 @@ function App() {
         </Routes>
       </div>
     </Router>
+    </CartProvider>
   );
 }
 

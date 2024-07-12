@@ -9,7 +9,7 @@ import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 const ProductList = () => {
     const [products, setProducts] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    const productsPerPage = 12; // Number of products per page
+    const productsPerPage = 12; 
   
     useEffect(() => {
       const fetchProducts = async () => {
@@ -24,16 +24,16 @@ const ProductList = () => {
       fetchProducts();
     }, []);
   
-    // Get current products
+    
     const indexOfLastProduct = currentPage * productsPerPage;
     const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
     const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
   
-    // Change page
+ 
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
     useEffect(() => {
-        setCurrentPage(1); // Reset to first page when products change
+        setCurrentPage(1); 
       }, [products]);
   
     return (

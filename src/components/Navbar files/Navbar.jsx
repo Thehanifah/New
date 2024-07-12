@@ -8,8 +8,12 @@ import { IoCloseOutline } from "react-icons/io5";
 import { IoIosMenu } from "react-icons/io";
 import { CiUser } from "react-icons/ci";
 import { Link, useNavigate } from 'react-router-dom';
+import { CartContext } from '../Cartcontext';
+import { useContext } from 'react'
 
 const Navbar = ({ onSearch, onSearchStateChange }) => {
+  const { cart } = useContext(CartContext);
+  const cartItemCount = cart.reduce((acc, item) => acc + item.quantity, 0);
   const [isOpen, setIsOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchInput, setSearchInput] = useState("");
@@ -81,7 +85,7 @@ const Navbar = ({ onSearch, onSearchStateChange }) => {
       <ul className={`navbar-ul ${isOpen ? 'show' : ''}`}>
         <li className="nav-item">
           <a className="nav-link active" aria-current="page" href="/Cart"><CiShoppingCart className="nav-item-icon" /><span>Cart</span></a>
-          <span className='cart-number'>3</span>
+          <span className='cart-number'>{cartItemCount}</span>
         </li>
         <li className="nav-item">
           <Link className="nav-link active" to="/shop"><PiHandbagSimpleThin className="nav-item-icon" /> <span>Shop</span></Link>

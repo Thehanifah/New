@@ -1,18 +1,83 @@
-import React from 'react'
-import Footer from './Footer'
-import './Cart.css'
-import image1 from '../images/1.jpg'
-import image2 from '../images/2.jpg'
-import image3 from '../images/3.jpg'
+import React, { useContext, useState, useEffect } from 'react';
+import axios from 'axios';
+import Footer from './Footer';
+import './Cart.css';
+import { CartContext } from './Cartcontext.jsx'; // Import CartContext
+import { FaCartShopping } from "react-icons/fa6";
+import CartProvider from './Cartcontext.jsx';
+import image1 from '../images/1.jpg';
+import image2 from '../images/2.jpg';
+import image3 from '../images/3.jpg';
 import { GoPlus } from "react-icons/go";
 import { HiOutlineMinus } from "react-icons/hi2";
-import Shop from './Shop'
 
+const Cart = () => {
+  const { cart, addToCart } = useContext(CartContext); // Access cart state and addToCart function
+  const [cartDetails, setCartDetails] = useState([]);
+  const [loading, setLoading] = useState(false);
 
-function Cart() {
+  useEffect(() => {
+    const fetchCartDetails = async () => {
+      try {
+        if (cart.length === 0) {
+          setCartDetails([]);
+          setLoading(false);
+          return;
+        }
+
+        setLoading(true);
+
+        const productIds = cart.map(item => item.id);
+        const responses = await Promise.all(productIds.map(id => axios.get(`https://fakestoreapi.com/products/${id}`)));
+        const products = responses.map(response => response.data);
+
+        const cartItems = cart.map(item => {
+          const product = products.find(p => p.id === item.id);
+          return { ...product, quantity: item.quantity };
+        });
+
+        setCartDetails(cartItems);
+        setLoading(false);
+      } catch (error) {
+        console.error('Error fetching cart details:', error);
+        setLoading(false);
+      }
+    };
+
+    // Fetch cart details whenever cart changes
+    fetchCartDetails();
+  }, [cart]);
+
   return (
     <>
-     <div className="container-box1">
+      <div className="cart-cont">
+      <FaCartShopping className='emptycartlogo'/>
+          {cartDetails.length === 0 ? (
+          
+          <p className='emptycart'>Your cart is empty</p>
+          
+        ) : (
+          <ul className="cart-items">
+            {cartDetails.map(item => (
+              <li key={item.id} className="cart-item">
+                <img src={item.image} alt={item.title} className="cart-item-image" />
+                <div className="cart-item-details">
+                  <h4>{item.title}</h4>
+                  <p>${item.price}</p>
+                  <p>Quantity: {item.quantity}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+      
+   
+
+
+
+
+     {/* <div className="container-box1">
         <div className="cart-cont">
             <div className='products1'>
                 <div className='product-info'>
@@ -81,9 +146,9 @@ function Cart() {
             <div className='btn-shop'><button className='Shop-again'><a href="/Shop">Continue Shopping</a></button> </div> 
          </div>   
     
-    </div>
+    </div> */}
 
-    <div className='total'>
+    {/* <div className='total'>
       <p className='p1'>
        Sub Total
       </p>
@@ -110,7 +175,7 @@ function Cart() {
 
     <div className='checkout-div'>
     <button className='checkout'>Checkout</button>
-    </div>
+    </div> */}
       
       <Footer/>
     </>

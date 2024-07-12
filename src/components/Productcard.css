@@ -11,8 +11,40 @@
     
   
   }
-  
 
+  .checkout a{
+    text-decoration: none;
+    font-family: 'montserrat';
+    background-color: #E88030;
+    color: #fff;
+
+  }
+  
+  .popup{
+    position: fixed;
+    top: 6%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #E88030;
+    color: #FCFAF7;
+    padding: 0.5em 2em;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    animation: fadeOut 1s ease-in-out forwards;
+  }
+
+  @keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+  @media(max-width:600px){
+    .popup{
+      padding: 0.5em 1.5em;
+      font-size: 0.5em;
+      top: 6%;
+  }}
   
    .card-img-top {
     height: 450px;
@@ -26,6 +58,7 @@
   .card-text {
     font-size: 1rem;
     color: #E88030;
+    margin-bottom: 3px;
   }
 
   .card-title {
