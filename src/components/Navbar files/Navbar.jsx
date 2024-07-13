@@ -11,7 +11,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { CartContext } from '../Cartcontext';
 import { useContext } from 'react'
 
-const Navbar = ({ onSearch, onSearchStateChange }) => {
+const Navbar = ({ products, onSearch, onSearchStateChange }) => {
   const { cart } = useContext(CartContext);
   const cartItemCount = cart.reduce((acc, item) => acc + item.quantity, 0);
   const [isOpen, setIsOpen] = useState(false);
@@ -45,12 +45,15 @@ const Navbar = ({ onSearch, onSearchStateChange }) => {
 
   const handleSearch = () => {
     if (searchInput.trim()) {
-      onSearch(searchInput.trim());
+      const filteredProducts = products.filter(product =>
+        product.name.toLowerCase().includes(searchInput.trim().toLowerCase())
+      );
+      onSearch(filteredProducts);
       setSearchInput("");
-      navigate('/');
+      navigate('/');  // Example: navigate to home page after search
     }
   };
-
+  
   const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
       handleSearch();

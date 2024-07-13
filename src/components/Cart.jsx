@@ -4,12 +4,12 @@ import Footer from './Footer';
 import './Cart.css';
 import { CartContext } from './Cartcontext.jsx'; // Import CartContext
 import { FaCartShopping } from "react-icons/fa6";
-import CartProvider from './Cartcontext.jsx';
-import image1 from '../images/1.jpg';
-import image2 from '../images/2.jpg';
-import image3 from '../images/3.jpg';
-import { GoPlus } from "react-icons/go";
-import { HiOutlineMinus } from "react-icons/hi2";
+// import CartProvider from './Cartcontext.jsx';
+// import image1 from '../images/1.jpg';
+// import image2 from '../images/2.jpg';
+// import image3 from '../images/3.jpg';
+// import { GoPlus } from "react-icons/go";
+// import { HiOutlineMinus } from "react-icons/hi2";
 
 const Cart = () => {
   const { cart, addToCart } = useContext(CartContext); // Access cart state and addToCart function
@@ -54,7 +54,7 @@ const Cart = () => {
       <FaCartShopping className='emptycartlogo'/>
           {cartDetails.length === 0 ? (
           
-          <p className='emptycart'>Your cart is empty</p>
+          <p className='emptycart'>Your cart is empty.</p>
           
         ) : (
           <ul className="cart-items">

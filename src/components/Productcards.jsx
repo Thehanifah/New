@@ -1,35 +1,43 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import './Productcard.css';
-import { CartContext } from './Cartcontext.jsx';
-import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import Footer from './Footer.jsx';
 
 const ProductCards = ({ product }) => {
-  const { addToCart } = useContext(CartContext);
-  const [showPopup, setShowPopup] = useState(false);
+  const navigate = useNavigate();
 
-  const handleAddToCart = () => {
-    addToCart(product);
-    setShowPopup(true);
-    setTimeout(() => {
-      setShowPopup(false);
-    }, 1000); 
+
+
+  const handleQuickLook = () => {
+    console.log('Navigating to product:', product.id);
+    navigate(`/product/${product.id}`);
   };
 
   return (
-    <div className="card">
-      <img src={product.image} className="card-img-top" alt={product.title} />
+    <>
+    <div className="cards" onClick={handleQuickLook}>
+      <div className='product-img-container'>
+        <img src={product.photoUrl} className="card-img" alt={product.name} />
+      </div>
+      
       <div className="card-body">
-        <h5 className="card-title">{product.title}</h5>
-        <p className="card-text">${product.price}</p>
-        <button className='checkout' onClick={handleAddToCart}>Add to cart</button>
-       </div>
-       {showPopup && <div className="popup">Product added to cart</div>}
+        <h5 className="card-title">{product.name}</h5>
+        <p className="card-text">${product.current_price}</p>
+      </div>
+      
+      <button className="quick-look" onClick={handleQuickLook}>
+        Quick Look
+      </button>
     </div>
-    
+    </>
   );
 };
 
 export default ProductCards;
+
+
+
+
 
 
 // import React from 'react';

@@ -3,14 +3,73 @@
 @import url('https://fonts.googleapis.com/css2?family=Lancelot&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 
-.card {
+.cards {
 
     height: 100%;
     width: 100%;
+    cursor: pointer;
     border: none !important;
-    
-  
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
   }
+
+  .card-body{
+ height: fit-content;
+  }
+
+  .card-img {
+    max-height: 70%;
+    width: auto;
+    object-fit: contain;
+    background-color: #fff;
+    color: #fff;
+    border-radius: 12px 12px 12px 12px!important;
+    
+
+  } 
+
+  .product-img-container{
+    background-color: #fff;
+    color: #fff;
+    width: 314px;
+    height: 392px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    position: relative;
+    box-shadow:    0 -4px 3px -4px rgba(0, 0, 0, 0.3), 
+    0 4px 4px -4px rgba(0, 0, 0, 0.3); 
+  }
+
+  .quick-look {
+    display: none; /* Hide by default */
+    position: absolute;
+    margin-top: 1em;
+    transition: opacity 0.3s ease-in-out;
+    padding: 0.5em 2em ;
+    font-family: 'montserrat';
+    border-radius: 20px;
+    border: 0;
+    background-color: #E88030;
+    color: #fff;
+    z-index: 3; 
+    align-self: center;
+    cursor: pointer;
+    z-index: 1; /* Ensure it's above other content */
+    transform: translateY(0); /* Initially translate down by 0 */
+    transition: transform 0.3s ease-in-out;
+    
+  }
+
+  .cards:hover .quick-look {
+    display: block;
+  
+    opacity: 1;
+  } 
+
 
   .checkout a{
     text-decoration: none;
@@ -46,14 +105,7 @@
       top: 6%;
   }}
   
-   .card-img-top {
-    height: 450px;
-    width: auto;
-    color: #FCFAF7;
-    border-radius: 12px 12px 12px 12px!important;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
-  } 
+  
 
   .card-text {
     font-size: 1rem;
@@ -80,38 +132,52 @@
     padding: 0!important;
   }
   
+
+  
   
   
   @media (max-width:1240px){
-    .card-img-top {
+    /* .card-img-top {
       height: 350px;
       width: auto;
       
-    } 
+    }  */
   }
 
-  @media (max-width:900px){
-    .card-img-top {
-      height: 280px;
+  @media (max-width:980px){
+    .product-img-container{
+      max-height: 70%;
+      max-width: 100%;
+      display: flex;
+      border-radius: 20px;
+      position: relative;
+      box-shadow:    0 -4px 3px -4px rgba(0, 0, 0, 0.3), 
+      0 4px 4px -4px rgba(0, 0, 0, 0.3); 
+    }
+
+    .card-img {
       width: auto;
+      object-fit: contain;
+      background-color: #fff;
+      color: #fff;
+      border-radius: 12px 12px 12px 12px!important;
       
+  
     } 
   }
 
   
-  @media (max-width:750px){
-    .card-img-top {
-      height: 350px;
-      width: 200px
-      
-    } 
+  @media (max-width:905px){
+    .product-img-container{
+      height: 85%;
+      width: 100%;
+    }
   }
 
-  @media (max-width:600px){
-    .card-img-top {
-      height: 200px;
-      width: auto;
-      
-    } 
+  @media (max-width: 859px){
+    .product-img-container{
+      height: 90%;
+      width: 100%;
+    }
   }
 
