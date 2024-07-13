@@ -17,9 +17,9 @@ function App() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const organizationId = 'e85c76b135534056949dbe1e331bfd70'; // Replace with your organization ID
-        const appId = 'IATTNAK97F6A7AO'; // Replace with your APP ID
-        const apiKey = '39a09a6f96aa439fb01e28aec781818220240712124513936181'; // Replace with your API KEY
+        const organizationId = 'e85c76b135534056949dbe1e331bfd70'; 
+        const appId = 'IATTNAK97F6A7AO'; 
+        const apiKey = '39a09a6f96aa439fb01e28aec781818220240712124513936181'; 
         const response = await axios.get('/api/products', {
           params: {
             organization_id: organizationId,
@@ -61,10 +61,10 @@ function App() {
       product.name.toLowerCase().includes(searchString)
     );
     console.log('Filtered products:', filteredProducts);
-    setFilteredProducts(filteredProducts); // Update filteredProducts state
+    setFilteredProducts(filteredProducts); 
     setIsSearching(true);
   } else {
-    setFilteredProducts([]); // Reset filteredProducts state if search input is empty
+    setFilteredProducts([]);
     setIsSearching(false);
   }
 };
