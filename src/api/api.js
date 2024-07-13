@@ -6,12 +6,12 @@ const getProducts = async (organizationId, reverseSort = false, page = 1, size =
   try {
     const response = await axios.get(API_URL, {
       params: {
-        organization_id: organizationId,
+        organization_id: process.env.ORGANIZATION_ID,
         reverse_sort: reverseSort,
         page: page,
         size: size,
-        Appid: appId,
-        Apikey: apiKey
+        Appid: process.env.APP_ID,
+        Apikey: process.env.API_KEY
       }
     });
     return response.data;

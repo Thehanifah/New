@@ -17,9 +17,9 @@ function App() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const organizationId = 'e85c76b135534056949dbe1e331bfd70'; 
-        const appId = 'IATTNAK97F6A7AO'; 
-        const apiKey = '39a09a6f96aa439fb01e28aec781818220240712124513936181'; 
+        const organizationId = process.env.ORGANIZATION_ID; 
+        const appId = process.env.APP_ID; 
+        const apiKey = process.env.API_KEY; 
         const response = await axios.get('/api/products', {
           params: {
             organization_id: organizationId,
